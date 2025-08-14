@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<h1>Módulo 4 - Visualización de datos </h1>
+  <p><b>Clase 1 - RawGraph</b></p>
+  <p>¿Cuál es el total de mis gastos este 2025?</p>
+  <object data="https://github.com/crached/infovis/blob/main/gastos_total.svg"></object>
+  <p>De ese total...</p>
+  <i>1. Fijos</i>
+  <object data="https://github.com/crached/infovis/blob/main/total_fijos.svg"></object>
+  <p>2. Transporte</p>
+  <object data="https://github.com/crached/infovis/blob/main/total_transporte.svg"></object>
+  <p>3. River</p>
+  <object data="https://github.com/crached/infovis/blob/main/total_river.svg"></object>
+  <p>4. Gym</p>
+  <object data="https://github.com/crached/infovis/blob/main/total_gym.svg"></object>
+</body>
+</html>
