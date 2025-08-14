@@ -7,13 +7,17 @@
 </head>
 <body>
 <h1>Módulo 4 - Visualización de datos </h1>
-  <p><b>Clase 1</b></p>
-  <p>¿Cuál es el total de mis gastos este 2025?</p>
-  <object data="https://github.com/crached/infovis/blob/main/gastos_total.jpg"></object>
-  <p>De ese total...</p>
+  <p><b>Clase 1 - RawGraph</b></p>
+  <p><i>¿Cuánto estoy gastando este 2025?</i></p>
+  <object data="https://crached.github.io/infovis/gastos_total.svg" type="image/svg+xml"></object>
+  <p>De esos gastos, cuáles son:</p>
   <p>1. Fijos</p>
-  <p>2. Transporte</p>
-  <p>3. River</p>
-  <p>4. Gym</p>
+  <object data="https://crached.github.io/infovis/total_fijos.svg" type="image/svg+xml"></object>
+  <p>2. River</p>
+  <object data="https://crached.github.io/infovis/total_river.svg" type="image/svg+xml"></object>
+  <p>3. Gym</p>
+  <object data="https://crached.github.io/infovis/total_gym.svg" type="image/svg+xml"></object>
+  <p>4. Transporte</p>
+  <object data="https://crached.github.io/infovis/total_transporte.svg" type="image/svg+xml"></object>
 </body>
 </html>
