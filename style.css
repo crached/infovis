@@ -64,17 +64,4 @@ section {
   margin-bottom: 60px;
 }
 
-/* Contenedor centrado con ancho fijo */
-.image-container {
-  width: 400px; /* o el tamaño que quieras */
-  margin: 0 auto;
-}
-
-/* Objeto SVG que se adapta al contenedor */
-.image-container object,
-.image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
 
