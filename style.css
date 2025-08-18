@@ -1,3 +1,4 @@
+/* Fondo claro */
 body {
   background-color: #fafafa; /* Muy claro, casi blanco */
   font-family: 'Open Sans', Arial, sans-serif; /* Tipografía sencilla */
@@ -63,5 +64,3 @@ button:hover {
 section {
   margin-bottom: 60px;
 }
-
-
