@@ -1,17 +1,65 @@
-/* Fondo gris para toda la página */
 body {
-  background-color: #cccccc; /* Gris claro */
+  background-color: #fafafa; /* Muy claro, casi blanco */
+  font-family: 'Open Sans', Arial, sans-serif; /* Tipografía sencilla */
+  color: #333333; /* Texto oscuro pero suave */
   margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+  padding: 40px 20px; /* Espaciado amplio */
+  line-height: 1.6;
 }
 
-/* Título principal (h1) en color bordo */
-h1 {
-  color: #800000; /* Bordó (vino tinto) */
+/* Encabezados en tonos pastel */
+h1, h2, h3, h4, h5, h6 {
+  color: #6a7f99; /* Azul pastel suave */
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-/* Otros títulos (h2 hasta h6) en negro */
-h2, h3, h4, h5, h6 {
-  color: black;
+/* Párrafos con buen espaciado */
+p {
+  margin-bottom: 24px;
+  color: #555555;
+}
+
+/* Contenedores con espacio para respirar */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(100, 100, 120, 0.1);
+}
+
+/* Enlaces con color pastel y efecto hover */
+a {
+  color: #a3b8d1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #7a90b8;
+  text-decoration: underline;
+}
+
+/* Botones suaves y simples */
+button {
+  background-color: #a3b8d1;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7a90b8;
+}
+
+/* Espaciado entre secciones */
+section {
+  margin-bottom: 60px;
 }
