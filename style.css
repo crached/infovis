@@ -1,9 +1,17 @@
+/* Fondo gris para toda la página */
 body {
-  background-color: #e0e0ff;
-  font-family: Georgia, serif;
+  background-color: #cccccc; /* Gris claro */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
+/* Título principal (h1) en color bordo */
 h1 {
-  color: darkgreen;
-  text-align: center;
+  color: #800000; /* Bordó (vino tinto) */
+}
+
+/* Otros títulos (h2 hasta h6) en negro */
+h2, h3, h4, h5, h6 {
+  color: black;
 }
