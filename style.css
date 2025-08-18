@@ -64,15 +64,3 @@ button:hover {
 section {
   margin-bottom: 60px;
 }
-
-.svg-container {
-  width: 400px;         /* tamaño reducido, ajusta si quieres */
-  margin: 0 auto;       /* centra el contenedor */
-  text-align: center;   /* centra contenido dentro si hace falta */
-}
-
-.svg-container object {
-  width: 100%;          /* ocupa todo el ancho del contenedor */
-  height: auto;         /* altura proporcional */
-  display: block;
-}
