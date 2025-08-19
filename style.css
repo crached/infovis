@@ -1,66 +1,79 @@
-/* Fondo claro */
-body {
-  background-color: #fafafa; /* Muy claro, casi blanco */
-  font-family: 'Open Sans', Arial, sans-serif; /* Tipografía sencilla */
-  color: #333333; /* Texto oscuro pero suave */
+/* Reset básico */
+* {
   margin: 0;
-  padding: 40px 20px; /* Espaciado amplio */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
   line-height: 1.6;
-}
-
-/* Encabezados en tonos pastel */
-h1, h2, h3, h4, h5, h6 {
-  color: #6a7f99; /* Azul pastel suave */
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-/* Párrafos con buen espaciado */
-p {
-  margin-bottom: 24px;
-  color: #555555;
-}
-
-/* Contenedores con espacio para respirar */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
   padding: 20px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(100, 100, 120, 0.1);
 }
 
-/* Enlaces con color pastel y efecto hover */
-a {
-  color: #a3b8d1;
-  text-decoration: none;
-  transition: color 0.3s ease;
+/* Encabezado */
+header {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-a:hover {
-  color: #7a90b8;
-  text-decoration: underline;
+header h1 {
+  font-size: 2rem;
+  color: #222;
 }
 
-/* Botones suaves y simples */
-button {
-  background-color: #a3b8d1;
-  border: none;
+.subtitulo {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Grid principal */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tarjetas */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+/* Placeholder para gráficos */
+.placeholder {
+  background-color: #e5e5e5;
+  height: 150px;
   border-radius: 6px;
-  padding: 10px 18px;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-style: italic;
 }
 
-button:hover {
-  background-color: #7a90b8;
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #aaa;
 }
 
-/* Espaciado entre secciones */
-section {
-  margin-bottom: 60px;
-}
