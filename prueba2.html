@@ -1,126 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Módulo 4 – Visualización de datos</title>
-  <!-- Tipografía moderna -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Fuente Roboto desde Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    /* Tipografía y fondo global */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f7f9;
-      color: #333;
-      line-height: 1.6;
-    }
-    header, footer {
-      text-align: center;
-      padding: 1em 0;
-      background: #ffffff;
-      margin-bottom: 1em;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      font-weight: 700;
+    :root {
+      --primary-color: #0072B2;
+      --accent-color: #56B4E9;
+      --background-color: #f5f7fa;
+      --card-bg: #ffffff;
+      --text-color: #333333;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto 2em;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 1rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: var(--primary-color);
+    }
+
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5em;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     .card {
-      background: #ffffff;
+      background-color: var(--card-bg);
       border-radius: 8px;
-      padding: 1em;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
 
     .card h2 {
-      font-size: 1.25rem;
-      margin-top: 0;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
     }
 
-    /* Contenedor para embeds responsivos */
-    .embed-container {
+    .card p {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .embed-responsive {
       position: relative;
       width: 100%;
-      padding-bottom: 56.25%; /* relación 16:9 */
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
       height: 0;
       overflow: hidden;
-      margin-top: 1em;
-    }
-    .embed-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
+      border-radius: 6px;
     }
 
-    footer p {
-      margin: 0;
+    .embed-responsive iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
       font-size: 0.9rem;
-      color: #555;
+      color: #888;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Módulo 4 – Visualización de datos</h1>
+    <p>Visualizaciones interactivas sobre los gastos estimados del 2025</p>
   </header>
 
-  <div class="container">
-    <!-- Sección 1: RAWGraph (gastos totales por mes) -->
+  <main class="grid">
+    <!-- RAWGraph -->
     <section class="card">
       <h2>¿Cuánto está costando el 2025?</h2>
-      <p>Estimativo de los gastos fijos por mes (enero–agosto) usando RAWGraph.</p>
-      <div class="embed-container">
-         <div style="text-align: center;"><object data="gastos_total.svg" type="image/svg+xml"></object></div>
+      <p>Gastos fijos mensuales representados visualmente.</p>
+      <div class="embed-responsive">
+       <div style="text-align: center;"><object data="gastos_total.svg" type="image/svg+xml"></object></div>
       </div>
     </section>
 
-    <!-- Sección 2: Datawrapper (desglose por grupo) -->
+    <!-- Flourish -->
     <section class="card">
-      <h2>Desglose de gastos por grupo</h2>
-      <p>Visualización en Datawrapper: componentes del gasto mensual en cuatro grupos.</p>
-      <div class="embed-container">
-        <!-- Reemplazá el src con tu URL real de Datawrapper -->
-        <iframe src="https://crached.github.io/infovis/datawrapper.html" allowfullscreen></iframe>
+      <h2>Desglose por Grupo</h2>
+      <p>Comparación de categorías de gasto.</p>
+      <div class="embed-responsive">
+        <div class="flourish-embed flourish-pictogram" data-src="visualisation/24708003" style="max-width: 800px; margin: auto; transform: scale(0.9); transform-origin: top;">
+  <script src="https://public.flourish.studio/resources/embed.js"></script></div>
       </div>
     </section>
 
-    <!-- Sección 3: Flourish -->
+    <!-- Datawrapper -->
     <section class="card">
-      <h2>Visualización con Flourish</h2>
-      <p>Otra forma de visualizar el mismo desglose usando Flourish.</p>
-      <div class="embed-container">
-        <!-- Reemplazá el src con tu URL real de Flourish -->
-        <iframe src="https://public.flourish.studio/resources/embed.js" allowfullscreen></iframe>
+      <h2>Gráfico de barras por mes</h2>
+      <p>Distribución mensual por grupo de gasto.</p>
+      <div class="embed-responsive">
+        <div style="text-align: center;"><iframe src="https://crached.github.io/infovis/datawrapper.html" width="70%" height="400px" frameborder="0"></iframe></div>
       </div>
     </section>
 
-    <!-- Sección 4: Tableau -->
+    <!-- Tableau -->
     <section class="card">
-      <h2>Comparación trimestral con Tableau</h2>
-      <p>Comparativa de gastos por grupo y trimestre usando Tableau.</p>
-      <div class="embed-container">
-        <!-- Reemplazá el src con tu URL real de Tableau -->
-        <iframe src="https://crached.github.io/infovis/gastos_tableau.html" allowfullscreen></iframe>
+      <h2>Visualización comparativa trimestral</h2>
+      <p>Insights generados con Tableau.</p>
+      <div class="embed-responsive">
+        <div style="text-align: center;"><iframe src="https://crached.github.io/infovis/gastos_tableau.html" width="70%" height="370px" frameborder="0"></iframe></div>
       </div>
     </section>
-  </div>
+  </main>
 
+  <footer>
+    <p>Constanza Rached – ITBA – Agosto 2025</p>
+  </footer>
+
+</body>
+</html>
   <footer>
     <p>Visualizaciones generadas con RAWGraph, Datawrapper, Flourish y Tableau • Constanza Rached - Agosto 2025 - ITBA</p>
   </footer>
