@@ -75,22 +75,11 @@
       margin-bottom: 1rem;
     }
 
-    .embed-responsive {
-      position: relative;
+    iframe, object {
       width: 100%;
-      padding-bottom: 62%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 6px;
-    }
-
-    .embed-responsive iframe,
-    .embed-responsive object {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
       border: none;
+      border-radius: 6px;
+      display: block;
     }
 
     footer {
@@ -110,46 +99,53 @@
 
   <main class="grid">
 
-    <!-- RAWGraph (SVG incrustado) -->
+    <!-- RAWGraph (SVG) -->
     <section class="card">
       <h2>¿Cuánto está costando el 2025?</h2>
       <p>Gastos fijos mensuales representados visualmente.</p>
-      <div class="embed-responsive">
-        <object data="gastos_total.svg" type="image/svg+xml"></object>
-      </div>
+      <object data="gastos_total.svg" type="image/svg+xml" height="500px"></object>
     </section>
 
     <!-- Flourish -->
     <section class="card">
       <h2>Desglose por Grupo</h2>
       <p>Comparación de categorías de gasto.</p>
-      <div class="embed-responsive">
-        <iframe src="https://flo.uri.sh/visualisation/24708003/embed" title="Flourish Visualization" allowfullscreen></iframe>
-      </div>
+      <iframe 
+        src="https://flo.uri.sh/visualisation/24708003/embed"
+        title="Flourish Visualisation"
+        height="600px"
+        allowfullscreen>
+      </iframe>
     </section>
 
     <!-- Datawrapper -->
     <section class="card">
       <h2>Gráfico de barras por mes</h2>
       <p>Distribución mensual por grupo de gasto.</p>
-      <div class="embed-responsive">
-        <iframe src="https://crached.github.io/infovis/datawrapper.html" allowfullscreen></iframe>
-      </div>
+      <iframe 
+        src="https://crached.github.io/infovis/datawrapper.html"
+        title="Datawrapper Gráfico"
+        height="600px"
+        allowfullscreen>
+      </iframe>
     </section>
 
     <!-- Tableau -->
     <section class="card">
       <h2>Visualización comparativa trimestral</h2>
       <p>Insights generados con Tableau.</p>
-      <div class="embed-responsive">
-        <iframe src="https://crached.github.io/infovis/gastos_tableau.html" allowfullscreen></iframe>
-      </div>
+      <iframe 
+        src="https://crached.github.io/infovis/gastos_tableau.html"
+        title="Tableau Dashboard"
+        height="700px"
+        allowfullscreen>
+      </iframe>
     </section>
 
   </main>
 
   <footer>
-    <p>Constanza Rached – ITBA – Agosto 2025</p>
+    <p>Visualizaciones generadas con RAWGraph, Datawrapper, Flourish y Tableau • Constanza Rached – ITBA – Agosto 2025</p>
   </footer>
 
 </body>
