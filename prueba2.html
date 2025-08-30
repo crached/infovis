@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Módulo 4 – Visualización de datos</title>
 
-  <!-- Fuente Roboto desde Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --primary-color: #0072B2;
-      --accent-color: #56B4E9;
       --background-color: #f5f7fa;
       --card-bg: #ffffff;
       --text-color: #333333;
@@ -27,7 +25,6 @@
       font-family: 'Roboto', sans-serif;
       background-color: var(--background-color);
       color: var(--text-color);
-      line-height: 1.6;
       padding: 1rem;
     }
 
@@ -81,13 +78,14 @@
     .embed-responsive {
       position: relative;
       width: 100%;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-bottom: 62%;
       height: 0;
       overflow: hidden;
       border-radius: 6px;
     }
 
-    .embed-responsive iframe {
+    .embed-responsive iframe,
+    .embed-responsive object {
       position: absolute;
       top: 0; left: 0;
       width: 100%;
@@ -111,12 +109,13 @@
   </header>
 
   <main class="grid">
-    <!-- RAWGraph -->
+
+    <!-- RAWGraph (SVG incrustado) -->
     <section class="card">
       <h2>¿Cuánto está costando el 2025?</h2>
       <p>Gastos fijos mensuales representados visualmente.</p>
       <div class="embed-responsive">
-       <div style="text-align: center;"><object data="gastos_total.svg" type="image/svg+xml"></object></div>
+        <object data="gastos_total.svg" type="image/svg+xml"></object>
       </div>
     </section>
 
@@ -125,8 +124,7 @@
       <h2>Desglose por Grupo</h2>
       <p>Comparación de categorías de gasto.</p>
       <div class="embed-responsive">
-        <div class="flourish-embed flourish-pictogram" data-src="visualisation/24708003" style="max-width: 800px; margin: auto; transform: scale(0.9); transform-origin: top;">
-  <script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        <iframe src="https://flo.uri.sh/visualisation/24708003/embed" title="Flourish Visualization" allowfullscreen></iframe>
       </div>
     </section>
 
@@ -135,7 +133,7 @@
       <h2>Gráfico de barras por mes</h2>
       <p>Distribución mensual por grupo de gasto.</p>
       <div class="embed-responsive">
-        <div style="text-align: center;"><iframe src="https://crached.github.io/infovis/datawrapper.html" width="70%" height="400px" frameborder="0"></iframe></div>
+        <iframe src="https://crached.github.io/infovis/datawrapper.html" allowfullscreen></iframe>
       </div>
     </section>
 
@@ -144,19 +142,15 @@
       <h2>Visualización comparativa trimestral</h2>
       <p>Insights generados con Tableau.</p>
       <div class="embed-responsive">
-        <div style="text-align: center;"><iframe src="https://crached.github.io/infovis/gastos_tableau.html" width="70%" height="370px" frameborder="0"></iframe></div>
+        <iframe src="https://crached.github.io/infovis/gastos_tableau.html" allowfullscreen></iframe>
       </div>
     </section>
+
   </main>
 
   <footer>
     <p>Constanza Rached – ITBA – Agosto 2025</p>
   </footer>
 
-</body>
-</html>
-  <footer>
-    <p>Visualizaciones generadas con RAWGraph, Datawrapper, Flourish y Tableau • Constanza Rached - Agosto 2025 - ITBA</p>
-  </footer>
 </body>
 </html>
