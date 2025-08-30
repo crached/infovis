@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Módulo 4 – Visualización de datos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif; margin: 20px; background: #f4f7f9; color: #333;
+    }
+    header, footer { text-align: center; margin: 1em 0; }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white; border-radius: 8px; padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .card h2 { margin-top: 0; }
+    .viz {
+      width: 100%; height: 300px;
+      /* Ajusta según el embed de visualización */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Módulo 4 – Visualización de datos</h1>
+  </header>
+  <div class="container">
+    <section class="card">
+      <h2>¿Cuánto está costando el 2025?</h2>
+      <!-- Aquí incrustas tu visualización de RAWGraph -->
+      <div class="viz" id="viz-rawgraph"></div>
+    </section>
+    <section class="card">
+      <h2>Desglose mensual por grupos</h2>
+      <!-- Aquí tu visualización de Flourish -->
+      <div class="viz" id="viz-flourish"></div>
+    </section>
+  </div>
+  <footer>
+    <p>Visualizaciones generadas con RAWGraph y Flourish</p>
+  </footer>
+</body>
+</html>
