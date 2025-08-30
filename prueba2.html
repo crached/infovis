@@ -2,27 +2,76 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Módulo 4 – Visualización de datos</title>
+  <!-- Tipografía moderna -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* Tipografía y fondo global */
     body {
-      font-family: 'Roboto', sans-serif; margin: 20px; background: #f4f7f9; color: #333;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f7f9;
+      color: #333;
+      line-height: 1.6;
     }
-    header, footer { text-align: center; margin: 1em 0; }
+    header, footer {
+      text-align: center;
+      padding: 1em 0;
+      background: #ffffff;
+      margin-bottom: 1em;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
     .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto 2em;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5em;
     }
+
     .card {
-      background: white; border-radius: 8px; padding: 15px;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 1em;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .card h2 { margin-top: 0; }
-    .viz {
-      width: 100%; height: 300px;
-      /* Ajusta según el embed de visualización */
+
+    .card h2 {
+      font-size: 1.25rem;
+      margin-top: 0;
+    }
+
+    /* Contenedor para embeds responsivos */
+    .embed-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* relación 16:9 */
+      height: 0;
+      overflow: hidden;
+      margin-top: 1em;
+    }
+    .embed-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #555;
     }
   </style>
 </head>
@@ -30,20 +79,51 @@
   <header>
     <h1>Módulo 4 – Visualización de datos</h1>
   </header>
+
   <div class="container">
+    <!-- Sección 1: RAWGraph (gastos totales por mes) -->
     <section class="card">
       <h2>¿Cuánto está costando el 2025?</h2>
-      <!-- Aquí incrustas tu visualización de RAWGraph -->
-      <div class="viz" id="viz-rawgraph"></div>
+      <p>Estimativo de los gastos fijos por mes (enero–agosto) usando RAWGraph.</p>
+      <div class="embed-container">
+        <!-- Reemplazá el src con tu URL real de RAWGraph -->
+        <iframe src="https://rawgraph.io/embed/?" allowfullscreen></iframe>
+      </div>
     </section>
+
+    <!-- Sección 2: Datawrapper (desglose por grupo) -->
     <section class="card">
-      <h2>Desglose mensual por grupos</h2>
-      <!-- Aquí tu visualización de Flourish -->
-      <div class="viz" id="viz-flourish"></div>
+      <h2>Desglose de gastos por grupo</h2>
+      <p>Visualización en Datawrapper: componentes del gasto mensual en cuatro grupos.</p>
+      <div class="embed-container">
+        <!-- Reemplazá el src con tu URL real de Datawrapper -->
+        <iframe src="https://datawrapper.dwcdn.net/xxxx/1/" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Sección 3: Flourish -->
+    <section class="card">
+      <h2>Visualización con Flourish</h2>
+      <p>Otra forma de visualizar el mismo desglose usando Flourish.</p>
+      <div class="embed-container">
+        <!-- Reemplazá el src con tu URL real de Flourish -->
+        <iframe src="https://flo.uri.sh/visualisation/123456/embed" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Sección 4: Tableau -->
+    <section class="card">
+      <h2>Comparación trimestral con Tableau</h2>
+      <p>Comparativa de gastos por grupo y trimestre usando Tableau.</p>
+      <div class="embed-container">
+        <!-- Reemplazá el src con tu URL real de Tableau -->
+        <iframe src="https://public.tableau.com/views/xxxxxx/Sheet1?:embed=y&:display_count=yes" allowfullscreen></iframe>
+      </div>
     </section>
   </div>
+
   <footer>
-    <p>Visualizaciones generadas con RAWGraph y Flourish</p>
+    <p>Visualizaciones generadas con RAWGraph, Datawrapper, Flourish y Tableau • Constanza Rached - Agosto 2025 - ITBA</p>
   </footer>
 </body>
 </html>
