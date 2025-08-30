@@ -1,152 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Módulo 4 – Visualización de datos</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
       --primary-color: #0072B2;
-      --background-color: #f5f7fa;
+      --background-color: #f9fbfc;
       --card-bg: #ffffff;
       --text-color: #333333;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
       font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 2rem 1rem;
       background-color: var(--background-color);
       color: var(--text-color);
-      padding: 1rem;
+      line-height: 1.6;
     }
 
-    header {
+    header, footer {
       text-align: center;
       padding: 2rem 1rem;
-      background-color: var(--card-bg);
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
     }
 
-    header h1 {
+    h1 {
       font-size: 2rem;
       color: var(--primary-color);
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      max-width: 1000px;
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .content {
+      max-width: 900px;
       margin: 0 auto;
     }
 
-    @media (min-width: 768px) {
-      .grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .card {
+    .section {
       background-color: var(--card-bg);
       border-radius: 8px;
-      padding: 1rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    .card h2 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: var(--primary-color);
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      color: #666;
-      margin-bottom: 1rem;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
     iframe, object {
       width: 100%;
+      height: 600px;
       border: none;
       border-radius: 6px;
       display: block;
     }
 
+    .flourish-embed {
+      height: 600px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
     footer {
-      text-align: center;
       font-size: 0.9rem;
       color: #888;
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
     <h1>Módulo 4 – Visualización de datos</h1>
-    <p>Visualizaciones interactivas sobre los gastos estimados del 2025</p>
+    <h2><em>¿Cuánto está costando el 2025?</em></h2>
   </header>
 
-  <main class="grid">
-
-    <!-- RAWGraph (SVG) -->
-    <section class="card">
-      <h2>¿Cuánto está costando el 2025?</h2>
-      <p>Gastos fijos mensuales representados visualmente.</p>
-      <object data="gastos_total.svg" type="image/svg+xml" height="500px"></object>
+  <main class="content">
+    <section class="section">
+      <h3><u>Objetivo</u></h3>
+      <p>Este proyecto de visualización de datos personales busca mostrar un estimativo de los gastos fijos en el transcurso del 2025.</p>
+      <p>Se utilizaron cuatro herramientas: <strong>RAWGraph</strong>, <strong>Datawrapper</strong>, <strong>Flourish</strong> y <strong>Tableau</strong>.</p>
     </section>
 
-    <!-- Flourish -->
-    <section class="card">
-      <h2>Desglose por Grupo</h2>
-      <p>Comparación de categorías de gasto.</p>
-      <iframe 
-        src="https://flo.uri.sh/visualisation/24708003/embed"
-        title="Flourish Visualisation"
-        height="600px"
-        allowfullscreen>
-      </iframe>
+    <section class="section">
+      <h4>Total mensual con <strong>RAWGraph</strong> 📊</h4>
+      <p>Visualización de los gastos totales de enero a agosto.</p>
+      <object data="gastos_total.svg" type="image/svg+xml"></object>
     </section>
 
-    <!-- Datawrapper -->
-    <section class="card">
-      <h2>Gráfico de barras por mes</h2>
-      <p>Distribución mensual por grupo de gasto.</p>
-      <iframe 
-        src="https://crached.github.io/infovis/datawrapper.html"
-        title="Datawrapper Gráfico"
-        height="600px"
-        allowfullscreen>
-      </iframe>
+    <section class="section">
+      <h4>Composición de gastos con <strong>Datawrapper</strong></h4>
+      <p>Desglose de gastos en 4 grupos mensualmente.</p>
+      <iframe src="https://crached.github.io/infovis/datawrapper.html" title="Gráfico Datawrapper"></iframe>
     </section>
 
-    <!-- Tableau -->
-    <section class="card">
-      <h2>Visualización comparativa trimestral</h2>
-      <p>Insights generados con Tableau.</p>
-      <iframe 
-        src="https://crached.github.io/infovis/gastos_tableau.html"
-        title="Tableau Dashboard"
-        height="700px"
-        allowfullscreen>
-      </iframe>
+    <section class="section">
+      <h4>Comparación por grupo con <strong>Flourish</strong> 💡</h4>
+      <p>Visualización del aumento mensual por grupo.</p>
+      <div class="flourish-embed flourish-pictogram" data-src="visualisation/24708003">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+      </div>
     </section>
 
+    <section class="section">
+      <h4>Comparativa trimestral con <strong>Tableau</strong> 📈</h4>
+      <p>Visualización comparativa de grupos por trimestre.</p>
+      <iframe src="https://crached.github.io/infovis/gastos_tableau.html" title="Gráfico Tableau"></iframe>
+    </section>
+
+    <section class="section" style="text-align: center;">
+      <h2>¡Eso es todo!</h2>
+      <img src="https://crached.github.io/infovis/thatsall.png" alt="¡Eso es todo!">
+    </section>
   </main>
 
   <footer>
-    <p>Visualizaciones generadas con RAWGraph, Datawrapper, Flourish y Tableau • Constanza Rached – ITBA – Agosto 2025</p>
+    <p>Constanza Rached – Agosto 2025 – ITBA</p>
   </footer>
-
 </body>
 </html>
