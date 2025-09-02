@@ -1,151 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Evolutivo mód. 4</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --primary-color: #0072B2;
-      --background-color: #f9fbfc;
-      --card-bg: #ffffff;
-      --text-color: #333333;
+      --primary-color: #0077b6;
+      --secondary-color: #00b4d8;
+      --bg-color: #f0f8ff;
+      --text-color: #333;
+      --card-bg: #fff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     body {
-      font-family: 'Roboto', sans-serif;
       margin: 0;
-      padding: 1.5rem 1rem;
-      background-color: var(--background-color);
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--bg-color);
       color: var(--text-color);
       line-height: 1.6;
     }
 
     header, footer {
       text-align: center;
-      padding: 1.5rem 1rem;
+      padding: 2rem 1rem;
+      background: var(--primary-color);
+      color: white;
     }
 
     h1 {
-      font-size: 2rem;
-      color: var(--primary-color);
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
     }
 
     h2 {
       font-size: 1.5rem;
-      margin-top: 1.5rem;
+      font-weight: 400;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
     }
 
     h3 {
-      font-size: 1.2rem;
-      margin-top: 1.5rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
     }
 
     h4 {
-      font-size: 1rem;
-      margin-top: 1rem;
+      margin: 1rem 0 0.5rem;
     }
 
-    .content {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1rem;
+    .comic {
+      font-family: "Comic Sans MS", cursive, monospace;
     }
 
-    .section {
-      background-color: var(--card-bg);
-      border-radius: 8px;
-      padding: 1rem 1.5rem;
-      margin: 1.5rem 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    object, iframe, .flourish-embed {
+    object, iframe {
       display: block;
-      margin: 0 auto;
-      max-width: 100%;
+      margin: 1rem auto;
       width: 100%;
+      max-width: 800px;
       height: 500px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
     }
 
     .flourish-embed {
-      position: relative;
-      overflow: hidden;
+      margin: 1rem auto;
+      max-width: 800px;
     }
 
     img {
-      max-width: 100%;
+      max-width: 300px;
       height: auto;
-      border-radius: 8px;
-      margin: 1rem auto 0;
+      margin-top: 1rem;
       display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     footer {
       font-size: 0.9rem;
-      color: #888;
-      margin-top: 3rem;
+      color: #ddd;
     }
 
-    .comic {
-      font-family: "Comic Sans MS", cursive, sans-serif;
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.2rem; }
+      iframe, object { height: 350px; }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Módulo 4 – <span style="font-style: italic;">Visualización de datos</span></h1>
-    <h2><i>¿Cuánto está costando el 2025?</i></h2>
+    <h1>Módulo 4 - <em>Visualización de datos</em></h1>
+    <h2>¿Cuánto está costando el 2025?</h2>
   </header>
 
-  <main class="content">
-    <section class="section">
+  <main>
+    <section>
       <h3><u>Objetivo</u></h3>
       <h4>El siguiente proyecto de visualización de datos personales tiene por finalidad mostrar un estimativo de los gastos fijos en el transcurso de este 2025.</h4>
       <h4>Para ello, se utilizaron 4 herramientas: <span class="comic">RAWGraph</span>, <span class="comic">Flourish</span>, <span class="comic">Datawrapper</span> y <span class="comic">Tableau</span>.</h4>
     </section>
 
-    <section class="section">
-      <h4><strong>Total mensual con <span class="comic">RAWGraph</span> 📊</strong></h4>
-      <p>Podemos visualizar el total de cada mes (enero-agosto) de la siguiente manera:</p>
+    <section>
+      <h4>En principio, a través de <span class="comic">RAWGraph</span> podemos visualizar el total de cada mes (enero-agosto) de la siguiente manera:</h4>
       <object data="gastos_total.svg" type="image/svg+xml"></object>
     </section>
 
-    <section class="section">
-      <h4><strong>Composición mensual con <span class="comic">Datawrapper</span> 🤔</strong></h4>
-      <p>¿Y si quisiera entender cómo se compone cada gasto mensual?</p>
-      <p>Con <span class="comic">Datawrapper</span> es posible desglosarlo en 4️⃣ grupos:</p>
-      <iframe src="https://crached.github.io/infovis/datawrapper.html" width="100%" height="500px" frameborder="0"></iframe>
+    <section>
+      <h4>¿Y si quisiera entender cómo se compone cada gasto mensual? 🤔</h4>
+      <h4>Con <span class="comic">Datawrapper</span> es posible desglosarlo en 4️⃣ grupos:</h4>
+      <iframe src="https://crached.github.io/infovis/datawrapper.html" width="100%" height="400px"></iframe>
     </section>
 
-    <section class="section">
-      <h4><strong>Visualización por grupo con <span class="comic">Flourish</span> 💡</strong></h4>
-      <p>Veamos cómo aumentó mensualmente el gasto en cada grupo:</p>
+    <section>
+      <h4>Esta información también se puede visualizar con <span class="comic">Flourish</span> 💡:</h4>
+      <h4>Veamos cómo aumentó mensualmente el gasto en cada grupo...</h4>
       <div class="flourish-embed flourish-pictogram" data-src="visualisation/24708003"></div>
     </section>
 
-    <section class="section">
-      <h4><strong>Comparativa trimestral con <span class="comic">Tableau</span> 📈</strong></h4>
-      <p>¿Cómo se vería si quisiéramos comparar el aumento trimestral por grupo?</p>
-      <iframe src="https://crached.github.io/infovis/gastos_tableau.html" width="100%" height="500px" frameborder="0"></iframe>
+    <section>
+      <h4>Por último, ¿cómo se vería si quisiera comparar el aumento de los gastos por grupo y trimestre?</h4>
+      <h4>¡<span class="comic">Tableau</span> nos ayuda!</h4>
+      <iframe src="https://crached.github.io/infovis/gastos_tableau.html" width="100%" height="370px"></iframe>
     </section>
 
-    <section class="section" style="text-align: center;">
+    <section style="text-align: center;">
       <h2>¡Eso es todo!</h2>
-      <img src="https://crached.github.io/infovis/thatsall.png" alt="¡Eso es todo!">
+      <img src="https://crached.github.io/infovis/thatsall.png" alt="Eso es todo">
     </section>
   </main>
 
   <footer>
-    <p>Constanza Rached – Agosto 2025 – ITBA</p>
+    <p>Constanza Rached - Agosto 2025 - ITBA</p>
   </footer>
 
-  <!-- Script para Flourish -->
+  <!-- Script de Flourish -->
   <script src="https://public.flourish.studio/resources/embed.js"></script>
 </body>
 </html>
