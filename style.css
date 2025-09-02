@@ -76,8 +76,8 @@ span.code-font {
 /* Gráficos responsivos */
 iframe, object {
   width: 100%;
-  max-width: 800px;
-  height: 420px;
+  max-width: 900px;
+  height: 450px;
   border: none;
   margin: 20px auto;
   display: block;
