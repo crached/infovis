@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evolutivo mód. 4</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #0072B2;
+      --background-color: #f9fbfc;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 1.5rem 1rem;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--primary-color);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .section {
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    object, iframe, .flourish-embed {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .flourish-embed {
+      position: relative;
+      overflow: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 1rem auto 0;
+      display: block;
+    }
+
+    footer {
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 3rem;
+    }
+
+    .comic {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Módulo 4 – <span style="font-style: italic;">Visualización de datos</span></h1>
+    <h2><i>¿Cuánto está costando el 2025?</i></h2>
+  </header>
+
+  <main class="content">
+    <section class="section">
+      <h3><u>Objetivo</u></h3>
+      <h4>El siguiente proyecto de visualización de datos personales tiene por finalidad mostrar un estimativo de los gastos fijos en el transcurso de este 2025.</h4>
+      <h4>Para ello, se utilizaron 4 herramientas: <span class="comic">RAWGraph</span>, <span class="comic">Flourish</span>, <span class="comic">Datawrapper</span> y <span class="comic">Tableau</span>.</h4>
+    </section>
+
+    <section class="section">
+      <h4><strong>Total mensual con <span class="comic">RAWGraph</span> 📊</strong></h4>
+      <p>Podemos visualizar el total de cada mes (enero-agosto) de la siguiente manera:</p>
+      <object data="gastos_total.svg" type="image/svg+xml"></object>
+    </section>
+
+    <section class="section">
+      <h4><strong>Composición mensual con <span class="comic">Datawrapper</span> 🤔</strong></h4>
+      <p>¿Y si quisiera entender cómo se compone cada gasto mensual?</p>
+      <p>Con <span class="comic">Datawrapper</span> es posible desglosarlo en 4️⃣ grupos:</p>
+      <iframe src="https://crached.github.io/infovis/datawrapper.html" width="100%" height="500px" frameborder="0"></iframe>
+    </section>
+
+    <section class="section">
+      <h4><strong>Visualización por grupo con <span class="comic">Flourish</span> 💡</strong></h4>
+      <p>Veamos cómo aumentó mensualmente el gasto en cada grupo:</p>
+      <div class="flourish-embed flourish-pictogram" data-src="visualisation/24708003"></div>
+    </section>
+
+    <section class="section">
+      <h4><strong>Comparativa trimestral con <span class="comic">Tableau</span> 📈</strong></h4>
+      <p>¿Cómo se vería si quisiéramos comparar el aumento trimestral por grupo?</p>
+      <iframe src="https://crached.github.io/infovis/gastos_tableau.html" width="100%" height="500px" frameborder="0"></iframe>
+    </section>
+
+    <section class="section" style="text-align: center;">
+      <h2>¡Eso es todo!</h2>
+      <img src="https://crached.github.io/infovis/thatsall.png" alt="¡Eso es todo!">
+    </section>
+  </main>
+
+  <footer>
+    <p>Constanza Rached – Agosto 2025 – ITBA</p>
+  </footer>
+
+  <!-- Script para Flourish -->
+  <script src="https://public.flourish.studio/resources/embed.js"></script>
+</body>
+</html>
