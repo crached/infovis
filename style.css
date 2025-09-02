@@ -77,17 +77,3 @@ footer {
   color: #aaa;
 }
 
-.large-iframe-container {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: auto; /* Permite scroll solo si es necesario */
-  text-align: center; /* Centra visualmente el contenido */
-}
-
-.large-iframe-container iframe {
-  width: 100%;
-  max-width: 100%;
-  height: 700px;
-  border: none;
-}
